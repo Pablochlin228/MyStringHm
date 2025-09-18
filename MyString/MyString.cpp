@@ -28,6 +28,14 @@ MyString::MyString(const MyString& obj)
 	strcpy_s(str, length + 1, obj.str);
 }
 
+MyString::MyString(MyString&& obj)
+{
+	str = obj.str;
+	obj.str = nullptr;
+	length = obj.length;
+	obj.length = 0;
+}
+
 MyString::~MyString()
 {
 	delete[] str;

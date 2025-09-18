@@ -8,6 +8,7 @@ public:
 	MyString(int size);
 	MyString(const char* s);
 	MyString(const MyString& obj);
+	MyString(MyString&& obj);
 	~MyString();
 	void Print();
 	void Input(const char* s);

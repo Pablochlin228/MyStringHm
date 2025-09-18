@@ -29,4 +29,8 @@ int main()
 	MyString obj3;
 	obj3.Input("I am sigma");
 	cout << obj3.MyStrCmp(obj2) << endl;
+
+	MyString obj4 = move(obj3);
+	obj4.Print();
+	obj3.Print();
 }
