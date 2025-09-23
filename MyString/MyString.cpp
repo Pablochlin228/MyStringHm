@@ -6,12 +6,14 @@ MyString::MyString()
 {
 	length = 80;
 	str = new char[length];
+	count++;
 }
 
 MyString::MyString(int size)
 {
 	length = size;
 	str = new char[length];
+	count++;
 }
 
 MyString::MyString(const char* s)
@@ -142,9 +144,10 @@ int MyString::MyStrCmp(MyString& b)
 	return result;
 }
 
+int MyString::count = 0;
 void MyString::PrintCount()
 {
-	count << "Count: " << count << endl;
+	cout << "Count: " << count << endl;
 }
 
 

@@ -32,7 +32,9 @@ int main()
 
 	MyString obj4 = move(obj3);
 	obj4.Print();
-	obj3.Print();
+
+	MyString obj5("Hello world");
+	obj5.Print();
 
 	MyString::PrintCount();
 }
