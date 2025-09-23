@@ -19,6 +19,7 @@ MyString::MyString(const char* s)
 	length = strlen(s);
 	str = new char[length + 1];
 	strcpy_s(str, length + 1, s);
+	count++;
 }
 
 MyString::MyString(const MyString& obj)
@@ -26,6 +27,7 @@ MyString::MyString(const MyString& obj)
 	length = obj.length;
 	str = new char[length + 1];
 	strcpy_s(str, length + 1, obj.str);
+	count++;
 }
 
 MyString::MyString(MyString&& obj)
@@ -139,5 +141,12 @@ int MyString::MyStrCmp(MyString& b)
 	int result = strcmp(this->str, b.str);
 	return result;
 }
+
+void MyString::PrintCount()
+{
+	count << "Count: " << count << endl;
+}
+
+
 
 

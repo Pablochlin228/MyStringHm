@@ -3,6 +3,7 @@ class MyString
 {
 	char* str;
 	int length;
+	static int count;
 public:
 	MyString();
 	MyString(int size);
@@ -19,5 +20,6 @@ public:
 	void MyStrCat(MyString& b);
 	void MyDelChr(char c);
 	int MyStrCmp(MyString& b);
+	static void PrintCount();
 };
 

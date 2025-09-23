@@ -33,4 +33,6 @@ int main()
 	MyString obj4 = move(obj3);
 	obj4.Print();
 	obj3.Print();
+
+	MyString::PrintCount();
 }
