@@ -21,5 +21,9 @@ public:
 	void MyDelChr(char c);
 	int MyStrCmp(MyString& b);
 	static void PrintCount();
+	MyString operator+ (MyString& c);
+	MyString operator+ (const char* c);
+	MyString operator+ (char c);
+	MyString operator- (const char* c);
 };
 

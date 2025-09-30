@@ -150,6 +150,35 @@ void MyString::PrintCount()
 	cout << "Count: " << count << endl;
 }
 
+MyString MyString::operator+(MyString& c)
+{
+	int newLength = length + c.length;
+	char* newStr = new char[newLength + 1];
+	strcpy_s(newStr, newLength + 1, str);
+	strcat_s(newStr, newLength + 1, c.str);
+
+	delete[] str;
+	str = newStr;
+	length = newLength;
+	MyString rez(newStr);
+	return rez;
+}
+
+MyString MyString::operator+(const char* c)
+{
+	return MyString();
+}
+
+MyString MyString::operator+(char c)
+{
+	return MyString();
+}
+
+MyString MyString::operator-(const char* c)
+{
+	return MyString();
+}
+
 
 
 
