@@ -33,16 +33,16 @@ int main()
 	//MyString obj4 = move(obj3);
 	//obj4.Print();
 
-	//MyString obj5("Hello world");
-	//obj5.Print();
+	MyString obj5("Hello world");
 
 	//MyString::PrintCount();
 
 	MyString rez = obj + obj2;
 	rez.Print();
-	//MyString rez2 = obj + "!!!";
-
-	//MyString rez3 = obj + '?';
-
-	//MyString rez4 = obj - "world";
+	MyString rez2 = obj5 + "!!!";
+	rez2.Print();
+	MyString rez3 = obj5 + '?';
+	rez3.Print();
+	MyString rez4 = obj5 - "world";
+	rez4.Print();
 }

@@ -157,26 +157,45 @@ MyString MyString::operator+(MyString& c)
 	strcpy_s(newStr, newLength + 1, str);
 	strcat_s(newStr, newLength + 1, c.str);
 
-	delete[] str;
-	str = newStr;
-	length = newLength;
 	MyString rez(newStr);
+	rez.length = newLength;
 	return rez;
 }
 
 MyString MyString::operator+(const char* c)
 {
-	return MyString();
+	int newLength = length + strlen(c);
+	char* newStr = new char[newLength + 1];
+	strcpy_s(newStr, newLength + 1, str);
+	strcat_s(newStr, newLength + 1, c);
+
+	MyString rez(newStr);
+	rez.length = newLength;
+	return rez;
 }
 
-MyString MyString::operator+(char c)
+MyString MyString::operator+(char ch)
 {
-	return MyString();
+	int newLength = length + 1;
+	char* newStr = new char[newLength + 1];
+	strcpy_s(newStr, newLength + 1, str);
+	char temp[2] = { ch,'\0' };
+	strcat_s(newStr, newLength + 1, temp);
+
+	MyString rez(newStr);
+	rez.length = newLength;
+	return rez;
 }
 
 MyString MyString::operator-(const char* c)
 {
-	return MyString();
+	int newLength = length - strlen(c);
+	char* newStr = new char[newLength + 1];
+	strncpy_s(newStr, newLength + 1, str, length - strlen(c));
+
+	MyString rez(newStr);
+	rez.length = newLength;
+	return rez;
 }
 
 
