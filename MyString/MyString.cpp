@@ -198,6 +198,122 @@ MyString MyString::operator-(const char* c)
 	return rez;
 }
 
+bool MyString::operator==(MyString& b)
+{
+	if (strcmp(str, b.str) == 0)
+	{
+		return true;
+	}
+	return false;
+}
+
+bool MyString::operator!=(MyString& b)
+{
+	if (strcmp(str, b.str) != 0)
+	{
+		return true;
+	}
+	return false;
+}
+
+bool MyString::operator>(MyString& b)
+{
+	if (strcmp(str, b.str) > 0)
+	{
+		return true;
+	}
+	return false;
+}
+
+bool MyString::operator>=(MyString& b)
+{
+	if (strcmp(str, b.str) >= 0)
+	{
+		return true;
+	}
+	return false;
+}
+
+bool MyString::operator<(MyString& b)
+{
+	if (strcmp(str, b.str) < 0)
+	{
+		return true;
+	}
+	return false;
+}
+
+bool MyString::operator<=(MyString& b)
+{
+	if (strcmp(str, b.str) <= 0)
+	{
+		return true;
+	}
+	return false;
+}
+
+bool MyString::operator>(const char* b)
+{
+	int result = strcmp(str, b);
+	if (result > 0)
+	{
+		return true;
+	}
+	return false;
+}
+
+bool MyString::operator>=(const char* b)
+{
+	int result = strcmp(str, b);
+	if (result >= 0)
+	{
+		return true;
+	}
+	return false;
+}
+
+bool MyString::operator<(const char* b)
+{
+	int result = strcmp(str, b);
+	if (result < 0)
+	{
+		return true;
+	}
+	return false;
+}
+
+bool MyString::operator<=(const char* b)
+{
+	int result = strcmp(str, b);
+	if (result <= 0)
+	{
+		return true;
+	}
+	return false;
+}
+
+bool MyString::operator==(const char* b)
+{
+	int result = strcmp(str, b);
+	if (result == 0)
+	{
+		return true;
+	}
+	return false;
+}
+
+bool MyString::operator!=(const char* b)
+{
+	int result = strcmp(str, b);
+	if (result != 0)
+	{
+		return true;
+	}
+	return false;
+}
+
+
+
 
 
 
