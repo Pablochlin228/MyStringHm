@@ -312,6 +312,58 @@ bool MyString::operator!=(const char* b)
 	return false;
 }
 
+MyString& MyString::operator++()
+{
+	int newLength = length + 1;
+	char* newStr = new char[newLength + 1];
+	strcpy_s(newStr, newLength + 1, " ");
+	strcat_s(newStr, newLength + 1, str);
+
+	delete[] str;
+	str = newStr;
+	length = newLength;
+	return *this;
+}
+
+MyString MyString::operator++(int)
+{
+	MyString temp = *this;
+	int newLength = length + 1;
+	char* newStr = new char[newLength + 1];
+	strcpy_s(newStr, newLength + 1, str);
+	strcat_s(newStr, newLength + 1, " ");
+
+	delete[] str;
+	str = newStr;
+	length = newLength;
+	return temp;
+}
+
+MyString& MyString::operator--()
+{
+	int newLength = length - 1;
+	char* newStr = new char[newLength + 1];
+	strcpy_s(newStr, newLength + 1, str + 1);
+
+	delete[] str;
+	str = newStr;
+	length = newLength;
+	return *this;
+}
+
+MyString MyString::operator--(int)
+{
+	MyString temp = *this;
+	int newLength = length - 1;
+	char* newStr = new char[newLength + 1];
+	strncpy_s(newStr, newLength + 1, str, length - 1);
+
+	delete[] str;
+	str = newStr;
+	length = newLength;
+	return temp;
+}
+
 
 
 

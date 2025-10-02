@@ -5,12 +5,27 @@ using namespace std;
 int main()
 {
 	MyString obj("Hello world");
+	//MyString obj3("Hello world");
 	obj.Print();
+	
+	//++obj
+	/*MyString obj2 = ++obj;
+	obj.Print();
+	obj2.Print();*/
 
-	//cout << obj.MyStrStr("Hello") << endl;
+	//obj++
+	/*MyString obj2 = obj++;
+	obj.Print();
+	obj2.Print();*/
 
-	MyString obj2;
-	obj2.Input("Hello worlld");
+	//--obj
+	/*MyString obj2 = --obj;
+	obj.Print();
+	obj2.Print();*/
+
+	//obj--
+	MyString obj2 = obj--;
+	obj.Print();
 	obj2.Print();
 
 	//cout << obj2.MyStrLen() << endl;
@@ -33,13 +48,13 @@ int main()
 	//MyString obj4 = move(obj3);
 	//obj4.Print();
 
-	MyString obj5("Hello world");
+	//MyString obj5("Hello world");
 
 	//MyString::PrintCount();
 
-	MyString rez = obj + obj2;
-	rez.Print();
-	MyString rez2 = obj5 + "!!!";
+	//MyString rez = obj + obj3;
+	//rez.Print();
+	/*MyString rez2 = obj5 + "!!!";
 	rez2.Print();
 	MyString rez3 = obj5 + '?';
 	rez3.Print();
@@ -102,5 +117,5 @@ int main()
 	if (obj != "Hello")
 	{
 		cout << "1 != string" << endl;
-	}
+	}*/
 }

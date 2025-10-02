@@ -37,4 +37,8 @@ public:
 	bool operator<=(const char* b);
 	bool operator==(const char* b);
 	bool operator!=(const char* b);
+	MyString& operator++();
+	MyString operator++(int);
+	MyString& operator--();
+	MyString operator--(int);
 };
